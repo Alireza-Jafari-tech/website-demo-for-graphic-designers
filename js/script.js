@@ -17,3 +17,11 @@ function openLightbox(imgElement) {
 function closeLightbox() {
   document.getElementById("lightbox").style.display = "none";
 }
+
+// hamburgur menu
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.querySelector("#header-nav ul");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle('show');
+});
