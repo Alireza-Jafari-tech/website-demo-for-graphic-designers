@@ -7,10 +7,10 @@
 
 :root {
   /* Neutral colors */
-  --color-bg: #493D9E;         /* Main header footer background */
-  --color-surface: #B2A5FF;     /* Cards, nav, etc. */
-  --color--main-bg: #DAD2FF;   /* Main background */
-  --color-border: #493D9E;
+  --color-bg: #493d9e; /* Main header footer background */
+  --color-surface: #b2a5ff; /* Cards, nav, etc. */
+  --color--main-bg: #dad2ff; /* Main background */
+  --color-border: #493d9e;
 
   /* Text */
   --color-text-primary: #000000;
@@ -18,14 +18,16 @@
   --color-text-muted: #888888;
 
   /* Accent colors */
-  --color-accent: #ff5252;      /* Red accent */
-  --color-accent-alt: #4caf50;  /* Green accent */
+  --color-accent: #ff5252; /* Red accent */
+  --color-accent-alt: #4caf50; /* Green accent */
 
   /* Button */
-  --color-btn-bg: #B2A5FF;
+  --color-btn-bg: #b2a5ff;
   --color-btn-text: #000000;
-}
 
+  /* --color: #FFF2AF; */
+
+}
 
 /* @font-face {
   font-family: ;
@@ -35,7 +37,7 @@
 /* ************************************** */
 
 body {
-
+  background-color: var(--color--main-bg);
 }
 
 a {
@@ -52,6 +54,11 @@ button {
 
 input {
   outline: none;
+  border: none
+}
+
+img {
+  width: 100%;
 }
 
 .container {
@@ -70,7 +77,6 @@ input {
 }
 
 #header .container {
-  
 }
 
 #header-top-section {
@@ -108,7 +114,6 @@ input {
 }
 
 #header #header-nav {
-
 }
 
 #header-nav ul {
@@ -123,7 +128,7 @@ input {
 }
 
 #header-nav ul li.active::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -134,7 +139,7 @@ input {
 }
 
 #header-nav ul li:hover::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -153,7 +158,10 @@ input {
 /* *****************main start**************** */
 
 #main {
+}
 
+section {
+  margin-top: 25px;
 }
 
 .grid-div-2 {
@@ -161,8 +169,14 @@ input {
   grid-template-columns: repeat(2, 1fr);
 }
 
-#main #hero {
+.grid-div-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 
+/* ******hero section start****** */
+
+#main #hero {
 }
 
 #main #hero #hero-intro {
@@ -179,17 +193,73 @@ input {
   color: var(--color-bg);
 }
 
-#hero #hero-intro button {
+#hero #hero-intro a {
   background-color: var(--color-btn-bg);
   color: var(--color-btn-text);
+  padding: 10px;
+  border-radius: 6px;
 }
 
 #main #hero #hero-picture {
-
 }
 
 #main #hero #hero-picture img {
   width: 100%;
 }
+
+/* ******hero section end****** */
+/* ******hero portfolio start****** */
+
+#portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#portfolio .container {
+  grid-gap: 20px;
+}
+
+#portfolio .show-all-btn {
+  background-color: var(--color-btn-bg);
+  color: var(--color-btn-text);
+  /* text-align: center; */
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 60px;
+}
+
+.gallery img {
+  /* margin: 10px; */
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+#lightbox {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 999;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+
+/* ******hero portfolio end****** */
+
 
 /* *****************main end**************** */
