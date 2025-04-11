@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  direction: rtl;
+}
+
+:root {
+  /* Neutral colors */
+  --color-bg: #493D9E;         /* Main header footer background */
+  --color-surface: #B2A5FF;     /* Cards, nav, etc. */
+  --color--main-bg: #DAD2FF;   /* Main background */
+  --color-border: #493D9E;
+
+  /* Text */
+  --color-text-primary: #000000;
+  --color-text-secondary: #cccccc;
+  --color-text-muted: #888888;
+
+  /* Accent colors */
+  --color-accent: #ff5252;      /* Red accent */
+  --color-accent-alt: #4caf50;  /* Green accent */
+
+  /* Button */
+  --color-btn-bg: #B2A5FF;
+  --color-btn-text: #000000;
+}
+
+
+/* @font-face {
+  font-family: ;
+  src: url();
+} */
+
+body {
+
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+input {
+  outline: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: 0px 50px !important;
+  width: 100%;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+}
+
+#header .container {
+  
+}
+
+#header-top-section {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-surface);
+  padding: 10px 0px;
+}
+
+#header-top-section-content {
+  margin: auto;
+}
+
+#header-top-section .X-btn {
+
+}
+
+#header-main-section {
+  background-color: var(--color-bg);
+  padding: 20px 0px;
+}
+
+#header-main-section .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header #header-logo {
+  width: 100px;
+}
+
+#header #header-logo img {
+  width: 100%;
+}
+
+#header #header-nav {
+
+}
+
+#header-nav ul {
+  display: inline-flex;
+}
+
+#header-nav ul li {
+  list-style-type: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  position: relative;
+}
+
+#header-nav ul li.active::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+
+#header-nav ul li:hover::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+
+#header-nav ul li a {
+  color: #fff;
+}
