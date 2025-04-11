@@ -9,7 +9,7 @@
   /* Neutral colors */
   --color-bg: #493d9e; /* Main header footer background */
   --color-surface: #b2a5ff; /* Cards, nav, etc. */
-  --color--main-bg: #dad2ff; /* Main background */
+  --color-main-bg: #dad2ff; /* Main background */
   --color-border: #493d9e;
 
   /* Text */
@@ -37,7 +37,7 @@
 /* ************************************** */
 
 body {
-  background-color: var(--color--main-bg);
+  /* background-color: var(--color-main-bg); */
 }
 
 a {
@@ -66,6 +66,11 @@ img {
   flex-direction: row;
   padding: 0px 50px !important;
   width: 100%;
+}
+
+section:not(#hero) {
+  margin: 25px 0px;
+  padding: 20px 0px;
 }
 
 /* ************************************** */
@@ -133,8 +138,9 @@ img {
   bottom: 0;
   left: 0;
   right: 0;
-  width: 100%;
+  width: 90%;
   height: 2px;
+  margin: auto;
   background-color: #fff;
 }
 
@@ -144,8 +150,9 @@ img {
   bottom: 0;
   left: 0;
   right: 0;
-  width: 100%;
+  width: 90%;
   height: 2px;
+  margin: auto;
   background-color: #fff;
 }
 
@@ -160,8 +167,19 @@ img {
 #main {
 }
 
-section {
-  margin-top: 25px;
+#main a {
+  background-color: var(--color-btn-bg);
+  color: var(--color-btn-text);
+  padding: 10px;
+  border-radius: 6px;
+}
+
+section:nth-child(odd) {
+  background-color: var(--color-main-bg);
+}
+
+section:nth-child(even) {
+  background-color: #fff;
 }
 
 .grid-div-2 {
@@ -186,7 +204,7 @@ section {
   align-items: center;
   gap: 30px;
   padding: 50px 0px;
-  background-color: var(--color--main-bg);
+  background-color: var(--color-main-bg);
 }
 
 #hero #hero-intro h1 {
@@ -194,10 +212,6 @@ section {
 }
 
 #hero #hero-intro a {
-  background-color: var(--color-btn-bg);
-  color: var(--color-btn-text);
-  padding: 10px;
-  border-radius: 6px;
 }
 
 #main #hero #hero-picture {
@@ -208,7 +222,8 @@ section {
 }
 
 /* ******hero section end****** */
-/* ******hero portfolio start****** */
+
+/* ******portfolio section start****** */
 
 #portfolio {
   display: flex;
@@ -220,12 +235,17 @@ section {
   grid-gap: 20px;
 }
 
-#portfolio .show-all-btn {
-  background-color: var(--color-btn-bg);
-  color: var(--color-btn-text);
-  /* text-align: center; */
-  padding: 10px;
-  border-radius: 6px;
+#portfolio .container > div {
+  height: 300px;
+}
+
+#portfolio .container > div img {
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.show-all-btn {
   margin-top: 60px;
 }
 
@@ -259,7 +279,53 @@ section {
 }
 
 
-/* ******hero portfolio end****** */
+/* ****** portfolio section end****** */
+
+/* ****** blog section start****** */
+
+#blogs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#blogs .section-title {
+
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+#blogs .container {
+  grid-gap: 20px;
+}
+
+#blogs .blog-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 10px;
+  gap: 8px;
+}
+
+#blogs .blog-item .blog-picture {
+  height: 300px;
+}
+
+#blogs .blog-item .blog-picture img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  height: 100%;
+  object-fit: cover;
+}
+
+#blogs .blog-item img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* ****** blog section end****** */
 
 
 /* *****************main end**************** */
