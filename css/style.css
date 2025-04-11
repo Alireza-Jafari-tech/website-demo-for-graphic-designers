@@ -250,7 +250,6 @@ section:nth-child(even) {
 }
 
 .gallery img {
-  /* margin: 10px; */
   cursor: pointer;
   border-radius: 8px;
   transition: 0.3s;
@@ -276,6 +275,20 @@ section:nth-child(even) {
   max-width: 90%;
   max-height: 90%;
   border-radius: 10px;
+}
+
+/* portfolio.html page */
+
+.gallery {
+  column-count: 4; /* 4 columns */
+  column-gap: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  margin-bottom: 10px;
+  display: block;
+  border-radius: 8px;
 }
 
 
