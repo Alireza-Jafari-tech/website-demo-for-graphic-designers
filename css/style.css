@@ -287,6 +287,7 @@ section:nth-child(even) {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 0px !important;
 }
 
 #blogs .section-title {
@@ -327,5 +328,59 @@ section:nth-child(even) {
 
 /* ****** blog section end****** */
 
-
 /* *****************main end**************** */
+
+/* ********************footer start************ */
+
+#footer {
+  background-color: var(--color-bg);
+  color: #fff;
+  text-align: center;
+  padding: 30px 0px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#footer h2 {
+  margin-bottom: 5px;
+  font-size: 24px;
+  color: #fff;
+}
+
+#footer p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.social-links {
+  margin: 15px 0;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.social-links a i {
+  margin-left: 6px;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+}
+
+.quote {
+  margin-top: 20px;
+  font-style: italic;
+  opacity: 0.8;
+  font-size: 13px;
+}
+
+/* ********************footer end************ */
