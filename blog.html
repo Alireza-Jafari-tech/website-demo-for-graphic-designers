@@ -43,7 +43,13 @@
     </header>
     <main id="main">
       <section id="blogs" style="margin: unset;">
-        <div class="container grid-div-3">
+        <div class="container grid-div-3-special {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 1rem;
+          width: 100%;
+          box-sizing: border-box;
+        }">
           <div class="blog-item">
             <div class="blog-picture">
               <img
