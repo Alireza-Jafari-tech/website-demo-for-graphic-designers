@@ -200,6 +200,12 @@ section:nth-child(even) {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+.grid-div-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  box-sizing: border-box;
+}
 
 /* ******hero section start****** */
 
@@ -247,13 +253,14 @@ section:nth-child(even) {
 }
 
 #portfolio .container > div {
-  height: 300px;
+  /* height: 300px; */
 }
 
 #portfolio .container > div img {
   height: 100%;
   border-radius: 10px;
-  object-fit: cover;
+  /* object-fit: cover; */
+  object-fit: contain;
 }
 
 .show-all-btn {
@@ -447,7 +454,26 @@ section:nth-child(even) {
   background-color: var(--color-bg);
   color: #fff;
 }
+
+/* ********************blog-post start************************* */
+
+.blog-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  margin: 20px 0px;
+}
+
+/* ********************blog-post end************************* */
 /* **********************responsive********************responsive**************************** */
+
+@media (max-width: 930px) {
+  #blogs .section-title {
+    font-size: 21px;
+  }
+}
 
 @media (max-width: 850px) {
   #header-nav ul {
@@ -472,12 +498,16 @@ section:nth-child(even) {
   #main #hero #hero-picture img {
     height: 100% !important;
   }
+  .grid-div-3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 760px) {
-  #hero .grid-div-2 {
+  .grid-div-2 {
+    display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 40px;
   }
 
   #main #hero #hero-intro {
@@ -489,9 +519,18 @@ section:nth-child(even) {
   #header-top-section-content p {
     font-size: 14px !important;
   }
+  #header #header-logo {
+    width: 100px;
+  }
 }
 
-@media (max-width: 660px) {
+@media (max-width: 650px) {
+  #blogs .section-title {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 600px) {
   .grid-div-3 {
     grid-template-columns: repeat(1, 1fr) !important;
   }
@@ -501,14 +540,17 @@ section:nth-child(even) {
   #main #hero #hero-intro {
     font-size: 16px !important;
   }
+  #header #header-logo {
+    width: 90px;
+  }
+  #portfolio .container {
+    padding: 20px;
+  }
 }
 
 @media (max-width: 530px) {
-  .container {
+  #header .container {
     padding: 0px 20px !important;
-  }
-  .grid-div-3 {
-    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 @media (max-width: 480px) {
@@ -527,10 +569,36 @@ section:nth-child(even) {
   #main #hero #hero-intro {
     font-size: 13px !important;
   }
+  #header #header-logo {
+    width: 80px;
+  }
+  #main a {
+    padding: 7px;
+    font-size: 14px;
+  }
+  #blogs .section-title {
+    font-size: 17px;
+  }
 }
 
 @media (max-width: 325px) {
   #header-top-section-content p {
     font-size: 9px !important;
+  }
+  #main #hero #hero-intro {
+    font-size: 11px !important;
+  }
+  #header-main-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+  #header #header-logo {
+    width: 110px;
+  }
+  #blogs .section-title {
+    font-size: 15px;
   }
 }
