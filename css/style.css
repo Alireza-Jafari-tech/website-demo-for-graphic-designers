@@ -51,6 +51,10 @@ button {
   border: none;
 }
 
+#header-nav button {
+  background-color: var(--color-btn-bg);
+}
+
 input {
   outline: none;
   border: none;
@@ -186,11 +190,11 @@ section:not(#hero) {
   border-radius: 6px;
 }
 
-section:nth-child(odd) {
+section:nth-child(odd):not(.blog-post section) {
   background-color: var(--color-main-bg);
 }
 
-section:nth-child(even) {
+section:nth-child(even):not(.blog-post section) {
   background-color: #fff;
 }
 
