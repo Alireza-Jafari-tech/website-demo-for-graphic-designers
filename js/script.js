@@ -24,4 +24,5 @@ const navLinks = document.querySelector("#header-nav ul");
 
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle('show');
+  menuToggle.classList.toggle('active');
 });
